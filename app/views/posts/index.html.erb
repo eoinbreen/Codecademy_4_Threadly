@@ -1,0 +1,24 @@
+    <div class="header">
+      <div class="container">
+        <h1>Threadly</h1>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        
+      <% @all_posts.each do |post| %> 
+        <div class="post"> 
+          <p class="comment"><%= post.comment %></p> 
+          <p class="time"><%= post.created_at %></p> 
+        </div> 
+    	<% end %>
+
+      <ul class="comments"> 
+        <% @all_posts.each do |p|%> 
+        	<li><%= p.comment %> </li> 
+      	<% end %> 
+      </ul>
+
+      </div>
+    </div>
